@@ -1,0 +1,397 @@
+url,desc,tag
+https://www.w3schools.com/tags/tag_a.asp,"The <a> tag defines a hyperlink, which is used to link from one page to another.",DESC
+https://www.w3schools.com/tags/tag_a.asp,"The most important attribute of the <a> element is the href attribute, which indicates the link's destination.",DESC
+https://www.w3schools.com/tags/tag_a.asp,"Tip: If the <a> tag has no href attribute, it is only a placeholder for a hyperlink.",TIP
+https://www.w3schools.com/tags/tag_a.asp,"Tip: A linked page is normally displayed in the current browser window, unless you specify another target.",TIP
+https://www.w3schools.com/tags/tag_a.asp,Tip: Use CSS to style links: CSS Links and CSS Buttons.,TIP
+https://www.w3schools.com/tags/tag_a.asp,The <a> tag also supports the Global Attributes in HTML.,TIP
+https://www.w3schools.com/tags/tag_a.asp,The <a> tag also supports the Event Attributes in HTML.,TIP
+https://www.w3schools.com/tags/tag_b.asp,The <b> tag specifies bold text without any extra importance.,DESC
+https://www.w3schools.com/tags/tag_b.asp,"Note: According to the HTML5 specification, the <b> tag should be used as a LAST resort when no other tag is more appropriate. The specification states that headings should be denoted with the <h1> to <h6> tags, emphasized text should be denoted with the <em> tag, important text should be denoted with the <strong> tag, and marked/highlighted text should be denoted with the <mark> tag.",TIP
+https://www.w3schools.com/tags/tag_b.asp,"Tip: You can also use the following CSS to set bold text: ""font-weight: bold;"".",TIP
+https://www.learn-html.org/en/Links,"To create a link, you will need to specify where you would like the user to be directed to when the link is clicked by specifying the?href?attribute.",INS
+https://www.learn-html.org/en/Links,"To create a link to a different section in the same page, you will need to use a hash sign along with the element ID to where you would like the browser to jump to. For example:",INS
+https://www.learn-html.org/en/Basic_Elements,A horizontal ruler <hr> tag acts as a simple separator between page sections.,DESC
+https://www.w3schools.com/tags/tag_ol.asp,The <ol> tag defines an ordered list. An ordered list can be numerical or alphabetical.,DESC
+https://www.w3schools.com/tags/tag_ol.asp,The <li> tag is used to define each list item.,DESC
+https://www.w3schools.com/tags/tag_ol.asp,Tip: Use CSS to style lists.,TIP
+https://www.w3schools.com/tags/tag_ol.asp,"Tip: For unordered list, use the <ul> tag.",TIP
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol,The <ol> HTML element represents an ordered list of items   typically rendered as a numbered list.,DESC
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol,"The <ol> and <ul> elements both represent a list of items. The difference is with the <ol> element, the order is meaningful.",DIFFERENCES
+https://www.w3schools.com/tags/tag_ul.asp,The <ul> tag defines an unordered (bulleted) list.,DESC
+https://www.w3schools.com/tags/tag_ul.asp,Use the <ul> tag together with the <li> tag to create unordered lists.,INS
+https://www.w3schools.com/tags/tag_ul.asp,"Tip: For ordered lists, use the <ol> tag.",TIP
+https://www.learn-html.org/en/Images,Images in HTML are inline elements that can be placed within a paragraph. ,DESC
+https://www.learn-html.org/en/Images,"To add an image, use the <img> tag along with the src attribute to specify the location of the image.",INS
+https://www.learn-html.org/en/Styles,"CSS stands for Cascading Style Sheets, and is the visual language of the web. With it, we can design how HTML pages look like.",DESC
+https://www.learn-html.org/en/Styles,"To define a CSS style using the inline method, use the HTML?style?attribute:",INS
+https://www.w3schools.com/tags/tag_style.asp,The?<style>?tag is used to define style information (CSS) for a document.,DESC
+https://www.learn-html.org/en/Styles,"You can define a CSS stylesheet in an external file (usually noted with the .css extension) and load it. To load the CSS file, we would need to use the <link> HTML tag in the following manner:",INS
+https://www.learn-html.org/en/Classes,CSS classes are commonly used to define a set of CSS styles and then apply them on an HTML element using selectors.,DESC
+https://www.learn-html.org/en/Classes,"To define a class within a CSS stylesheet, use the dot selector, as follows:",INS
+https://www.learn-html.org/en/Selectors,CSS Selectors are extremely useful for defining a query on a subset of the elements on a page.,DESC
+https://www.w3schools.com/tags/tag_textarea.asp,The <textarea> tag defines a multi-line text input control.,DESC
+https://www.w3schools.com/tags/tag_textarea.asp,"The <textarea> element is often used in a form, to collect user inputs like comments or reviews.",DESC
+https://www.w3schools.com/tags/tag_textarea.asp,"A text area can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier).",INFO
+https://www.w3schools.com/tags/tag_textarea.asp,The size of a text area is specified by the <cols> and <rows> attributes (or with CSS).,ATR
+https://www.w3schools.com/tags/tag_textarea.asp,"The name attribute is needed to reference the form data after the form is submitted (if you omit the name attribute, no data from the text area will be submitted).",ATR
+https://www.w3schools.com/tags/tag_textarea.asp,The id attribute is needed to associate the text area with a label.,ATR
+https://www.learn-html.org/en/JavaScript,"JavaScript runs in the front-end, so it can update HTML elements, connect to a server (e.g Database server, File Server etc.), change page style (CSS) and more.",DESC
+https://www.learn-html.org/en/JavaScript,"HTML has the?<script>?tag, which allows scripts in a web page.",DESC
+https://www.learn-html.org/en/JavaScript,"The?src?attribute, imports the specified JavaScript file. Also the?src?attribute, can import scripts from a CDN (Content Delivery Network). That is mostly used for including JavaScript libraries.",ATR
+https://www.w3schools.com/tags/tag_script.asp,The <script> tag is used to embed a client-side script (JavaScript).,DESC
+https://www.w3schools.com/tags/tag_script.asp,"The <script> element either contains scripting statements, or it points to an external script file through the src attribute.",DESC
+https://www.w3schools.com/tags/tag_script.asp,"Tip: Also look at the <noscript> element for users that have disabled scripts in their browser, or have a browser that doesn't support client-side scripting.",TIP
+https://www.w3schools.com/tags/tag_script.asp,"Tip: If you want to learn more about JavaScript, visit our JavaScript Tutorial.",TIP
+https://www.learn-html.org/en/UI_Libraries,"The CSS libraries ease the process of creating a beautiful website with little effort, and requires only very basic CSS knowledge to use.",DESC
+https://www.learn-html.org/en/Bootstrap,The Bootstrap framework allows us to write plain HTML that looks much more modern and useful than the default HTML stylesheet.,DESC
+https://www.learn-html.org/en/Bootstrap,"To load Bootstrap, you would need to load it from somewhere. We can load the Bootstrap library from a CDN by running the following <link> tag:
+
+<link rel=""stylesheet"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"">",INS
+https://www.w3schools.com/tags/tag_table.asp,The <table> tag defines an HTML table.,DESC
+https://www.w3schools.com/tags/tag_table.asp,"An HTML table consists of one <table> element and one or more <tr>, <th>, and <td> elements.",DESC
+https://www.w3schools.com/tags/tag_table.asp,"The <tr> element defines a table row, the <th> element defines a table header, and the <td> element defines a table cell.",DESC
+https://www.geeksforgeeks.org/html-tables/,Defining Tables in HTML: An HTML table is defined with the ,INS
+https://www.w3schools.com/tags/tag_body.asp,The?<body>?tag defines the document's body.,DESC
+https://www.w3schools.com/tags/tag_body.asp,"The?<body>?element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.",DESC
+https://www.w3schools.com/tags/tag_button.asp,The <button> tag defines a clickable button.,DESC
+https://www.w3schools.com/tags/tag_button.asp,"Inside a <button> element you can put text (and tags like <i>, <b>, <strong>, <br>, <img>, etc.). That is not possible with a button created with the <input> element!",DESC
+https://www.geeksforgeeks.org/html-button-tag/,The <button> tag in HTML is used to define the clickable button. <button> tag is used to submit the content.,DESC
+https://www.w3schools.com/tags/tag_script.asp,"Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.",DESC
+https://www.w3schools.com/tags/tag_script.asp,Most browsers will display the <script> element with the following default values: ,INS
+https://www.w3schools.com/tags/tag_iframe.asp,The <iframe> tag specifies an inline frame.,DESC
+https://www.w3schools.com/tags/tag_iframe.asp,An inline frame is used to embed another document within the current HTML document.,DESC
+https://www.w3schools.com/tags/tag_iframe.asp,Tip: Use CSS to style the <iframe> (see example below).,TIP
+https://www.w3schools.com/tags/tag_iframe.asp,Tip: It is a good practice to always include a title attribute for the <iframe>. This is used by screen readers to read out what the content of the <iframe> is.,TIP
+https://www.javatpoint.com/html-comments,"Comments are some text or code written in your code to give an explanation about the code, and not visible to the user.",DESC
+https://www.javatpoint.com/html-comments,Comments which are used for HTML file are known as HTML comments.,DESC
+https://www.javatpoint.com/html-comments,"Anything written between these tags will be ignored by the browser, so comments will not be visible on the webpage.",INFO
+https://www.javatpoint.com/html-comments,Comments of any code make code easy to understand and increase readability of code.,INFO
+https://www.javatpoint.com/html-comments,"Comments are also part of the code, which gives an explanation of the code.",INFO
+https://www.javatpoint.com/html-comments,You can add comments in your HTML file using <! -- ... --> tag. So if you will write anything between theses comment tag that will be treated as comment and browser will not read it.,INS
+https://www.w3schools.com/tags/tag_video.asp,"The?<video>?tag is used to embed video content in a document, such as a movie clip or other video streams.",DESC
+https://www.w3schools.com/tags/tag_video.asp,The?<video>?tag contains one or more?<source>?tags with different video sources. The browser will choose the first source it supports.,ATR
+https://www.w3schools.com/tags/tag_video.asp,The text between the?<video>?and?</video>?tags will only be displayed in browsers that do not support the <video> element.,INS
+https://www.javatpoint.com/html-table,HTML table tag?is used to display data in tabular form (row * column). There can be many columns in a row.,DESC
+https://www.javatpoint.com/html-table,"We can create a table to display data in tabular form, using <table> element, with the help of <tr> , <td>, and <th> elements.",INS
+https://www.javatpoint.com/html-table,"In Each table, table row is defined by <tr> tag, table header is defined by <th>, and table data is defined by <td> tags.",INS
+https://www.w3schools.com/tags/tag_span.asp,"The?<span>?tag is an inline container used to mark up a part of a text, or a part of a document.",DESC
+https://www.w3schools.com/tags/tag_span.asp,The?<span>?tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.,DESC
+https://www.w3schools.com/tags/tag_small.asp,The?<small>?tag defines smaller text (like copyright and other side-comments).,DESC
+https://www.w3schools.com/tags/tag_br.asp,The?<br>?tag inserts a single line break.,DESC
+https://www.w3schools.com/tags/tag_body.asp,The?<body>?tag defines the document's body.,DESC
+https://www.geeksforgeeks.org/div-tag-html/,"The div tag is known as Division tag. The div tag is used in HTML to make divisions of content in the web page like (text, images, header, footer, navigation bar, etc).",DESC
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div,The?<div>?HTML?element is the generic container for flow content. It has no effect on the content or layout until styled in some way using?CSS,DESC
+https://www.geeksforgeeks.org/html-style-tag/,"The <style> tag in HTML helps us to modify our text, viewed in the page. This modification includes changing font size, font family, font color etc.?",DESC
+https://www.geeksforgeeks.org/html-style-tag/,The font family changes the font style of a text and can be used in any text writing tag like <p> or heading tag.,DESC
+https://www.geeksforgeeks.org/html-style-tag/,The font size changes the size of a text and this can also be used in any text writing tag like <p> or heading tag.,DESC
+https://www.geeksforgeeks.org/html-style-tag/,The font color tag changes the color of a text and can be used in any text writing tag like <p> or heading tag.,DESC
+https://www.geeksforgeeks.org/html-style-tag/,"?The text alignment tag is used to change the alignment of a text including centre, left or right alignment.",DESC
+https://www.geeksforgeeks.org/html-style-tag/,Using this attribute we can change the color of the background page or web page. This attribute is used along with the body tag to change the whole color of the body.,DESC
+https://www.javatpoint.com/html-lists,"In the ordered HTML lists, all the list items are marked with numbers by default. It is known as numbered list also.",DESC
+https://www.javatpoint.com/html-lists,The ordered list starts with <ol> tag and the list items start with <li> tag.,INS
+https://www.javatpoint.com/html-lists,"In HTML Unordered list, all the list items are marked with bullets. It is also known as bulleted list also.",DESC
+https://www.javatpoint.com/html-lists,The Unordered list starts with <ul> tag and list items start with the <li> tag.,INS
+https://www.geeksforgeeks.org/html-iframes/,The ,DESC
+https://www.geeksforgeeks.org/html-iframes/,An inline frame is used to embed another document within the current HTML document.,DESC
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a,"The <a> HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.",DESC
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a,"Content within each <a> should indicate the link's destination. If the href attribute is present, pressing the enter key while focused on the <a> element will activate it.",INFO
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span,"<span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline element.",INFO
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span,"It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang.",DESC
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span,It should be used only when no other semantic element is appropriate.,INFO
+https://www.w3schools.com/tags/tag_a.asp,The <body> tag in HTML is used to define the main content present inside an HTML page.,DESC
+https://www.w3schools.com/tags/tag_a.asp,It is always enclosed within <html>tag.,INFO
+https://www.w3schools.com/tags/tag_a.asp,The <body> tag is the last child of <html> tag.,DESC
+https://www.w3schools.com/tags/tag_a.asp,A body tag contains starting as well as an ending tag.,INFO
+https://www.w3schools.com/tags/tag_a.asp,The <body> HTML element represents the content of an HTML document.,DESC
+https://www.w3schools.com/tags/tag_a.asp,There can be only one <body> element in a document.,INFO
+br,"In this article, we will know how to add line-break using HTML <br> tag.",TIP
+br,The browser does not recognize new line and paragraph formatting in the text.,INFO
+br,"If you want to start a new line, you need to insert a line break with the help of the <br>.",DESC
+br,The <br> tag inserts a single carriage return or breaks in the document.,DESC
+br,The <br> HTML element produces a line break in text (carriage-return).,DESC
+br,"It is useful for writing a poem or an address, where the division of lines is significant.",INFO
+br,"As you can see from the above example, a <br> element is included at each point where we want the text to break.",INS
+br,The text after the <br> begins again at the start of the next line of the text block.,INS
+div,The div tag is known as Division tag.,DESC
+div,"The div tag is used in HTML to make divisions of content in the web page like (text, images, header, footer, navigation bar, etc).",DESC
+div,Div tag has both open(<div>) and closing (</div>) tag and it is mandatory to close the tag.,INS
+div,The Div is the most usable tag in web development because it helps us to separate out data in the web page and we can create a particular section for particular data or function in the web pages.Div tag is Block level tagIt is a generic container tagIt is used to the group of various tags of HTML so that sections can be created and style can be applied to them.As we know Div tag is block-level tag in this example div tag contain entire width.,INFO
+div,The <div> HTML element is the generic container for flow content.,DESC
+div,It has no effect on the content or layout until styled in some way using CSS (e.g.,INFO
+div,"styling is directly applied to it, or some kind of layout model like Flexbox is applied to its parent element).",INFO
+div,"As a ""pure"" container, the <div> element does not inherently represent anything.",INFO
+div,"Instead, it's used to group content so it can be easily styled using the class or id attributes, marking a section of a document as being written in a different language (using the lang attribute), and so on.",INFO
+head,The <head> tag in HTML is used to define the head portion of the document which contains information related to the document.,DESC
+head,"The <head> tag contains other head elements such as <title>, <meta>, <link>, <style> <link> etc.",INFO
+head,"In HTML 4.01 the <head> element was mandatory but in HTML5, the <head> element can be omitted.Tag Specific Attributes:The below-mentioned layout-attributes of the <hr> tag have been removed from HTML5.",INFO
+head,"Attribute: profile: It is used to specify the URL to a document that contains one or more metadata profiles for browsers to clearly understand the information.Syntax : <head>
+<title>Title of the document</title>
+</head>Below program illustrates the <head> element:Program 1:HTML<!DOCTYPE html><html lang=""en""> <head>    <title>HTML Head Tag </title></head> <body>     <p>GeeksforGeeks is a portal for geeks.</p>     <hr></body> </html>Output:  Program 2(Using style tag inside head tag)HTML<!DOCTYPE html> <html> <head>    <style>        body {            background: skyblue;        }                 h1 {            color: red;        }                 p {            color: blue;        }    </style></head> <body>     <h1>GeeksforGeeks</h1>     <p>It is a portal for geeks.</p>  </body> </html>Output:  Program 3(Using link tag inside head tag):HTML<!DOCTYPE html> <html> <head>    <link rel=""stylesheet"" type=""text/css"" href=""mystyle.css""></head> <body>     <h1>GeeksforGeeks</h1>     <p>It is a portal for geeks.</p>  </body> </html>Output:  Supported Browsers: Google ChromeInternet ExplorerFirefoxOperaSafari My Personal Notes
+arrow_drop_upSave",ATR
+head,"The <head> HTML element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.",DESC
+hr,The <hr> tag in HTML stands for horizontal rule and is used to insert a horizontal rule or a thematic break in an HTML page to divide or separate document sections.,DESC
+hr,"The <hr> tag is an empty tag, and it does not require an end tag.Tag Attributes: The table given below describe the <hr> tag attributes: AttributeValueDescriptionAlignleft center rightUsed to specify the alignment of the horizontal rule.noshadenoshadeUsed to specify the bar without shading effect.sizepixelsUsed to specify the height of the horizontal rule.widthpixelsUsed to specify the width of the horizontal rule.Syntax :  <hr> ...Below programs illustrate the <hr> tag in HTML:Example 1:  HTML<!DOCTYPE html>  <html>      <body>          <p>There is a horizontal rule below this paragraph.</p>          <!--HTML hr tag is used here-->        <hr>          <p>This is a horizontal rule above this paragraph.</p>      </body>         </html>                    Output:  Example 2(hr tag with attributes):  HTML<!DOCTYPE html>  <html>      <body>                  <p>Normal horizontal line.</p>                  <!--HTML hr tag is used here-->        <hr>                     <p>Horizontal line with height of 30 pixels</p>          <hr size=""30"">                     <p>Horizontal line with height of 30 pixels                                       and noshade.</p>          <hr size=""30"" noshade>             </body>  </html>                    Output:  Supported Browsers:  Google ChromeInternet ExplorerFirefoxOperaSafari HTML is the foundation of webpages, is used for webpage development by structuring websites and web apps.You can learn HTML from the ground up by following this HTML Tutorial and HTML Examples.CSS is the foundation of webpages, is used for webpage development by styling websites and web apps.You can learn CSS from the ground up by following this CSS Tutorial and CSS Examples.My Personal Notes
+arrow_drop_upSave",INS
+hr,"The <hr> HTML element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.",DESC
+hr,"Historically, this has been presented as a horizontal rule or line.",DESC
+hr,"While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.",INFO
+strong,The <strong> tag in HTML is the parsed tag and used to show the importance of the text.,DESC
+strong,Make that text bold.Syntax: <strong> Contents... </strong>Example: HTML<!DOCTYPE html><html>       <body>        <h1>GeeksforGeeks</h1>        <h2><strong> Tag</h2>        <!-- html strong tag used here -->        <strong>Welcome to geeksforGeeks!</strong>    </body>   </html>Output:  Example 2: Use CSS property to set bold font weight.,EXP
+strong,"HTML<!DOCTYPE html><html>    <head>        <title>strong Tag</title>        <style>            body {                text-align:center;            }            h1 {                color:green;            }            .gfg {                font-weight:bold;            }        </style>    </head>    <body>        <h1>GeeksforGeeks</h1>        <h2>font-weight: bold;</h2>        <div class = ""gfg"">Welcome to geeksforGeeks!</div>    </body></html>                   Output:  Supported Browsers: Google ChromeInternet ExplorerFirefoxOperaSafari My Personal Notes
+arrow_drop_upSave",EXP
+strong,"The <strong> HTML element indicates that its contents have strong importance, seriousness, or urgency.",DESC
+strong,Browsers typically render the contents in bold type.,INFO
+style,"The <style> tag in HTML helps us to modify our text, viewed in the page.",DESC
+style,"This modification includes changing font size, font family, font color etc.",DESC
+style,Not only the texts but also we can change the style of a body ar part of a page.,INFO
+style,"Now letÁEEEEEÁEEEEEEEEÁEEEEEÁEÁEEEEEÁEEEEEEEEs look at various attributes of style and what else the tag supports.Syntax:
+<tagname style=""ncludes <p>, <body>, from <h1> to <h6> etc.The property is borrowed from CSS like color, font-size, font-family etc.The value is also borrowed from CSS.HTML Font Family: The font family changes the font style of a text and can be used in any text writing tag like <p> or heading tag.kk!!!vvbody<</httl>       Output",INFO
+style,"The <style> HTML element contains style information for a document, or part of a document.",DESC
+style,"It contains CSS, which is applied to the contents of the document containing the <style> element.",DESC
+style,The <style> element must be included inside the <head> of the document.,INS
+style,"In general, it is better to put your styles in external stylesheets and apply them using <link> elements.",INFO
+style,"If you include multiple <style> and <link> elements in your document, they will be applied to the DOM in the order they are included in the document ÁEEEEEÁEEEEEEEEÁEEEEEÁEÁEEEEEÁEEEEEEEE make sure you include them in the correct order, to avoid unexpected cascade issues.",INFO
+style,"In the same manner as <link> elements, <style> elements can include media attributes that contain media queries, allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.",INFO
+i,The <i> tag in HTML is used to display the content in italic style.,DESC
+i,"This tag is generally used to display the technical term, phrase, the important word in a different language.",DESC
+i,"The <i> tag is a container tag that contains the opening tag, content & closing tag.Syntax:<i> Contents</i>Accepted Attributes: This is a Global attribute, and can be used on any HTML element.Below code examples illustrate the use of <i> tag in HTML.Example 1: This is a simple example illustrating the <i> tag to make the italic text in HTML.HTML<!DOCTYPE html><html><head>    <title>HTML i Tag</title></head>    <body>    <h1>GeeksforGeeks</h1>    <h3>HTML i tag</h3>    <div>          <p>          <i>A Computer Science portal for geeks.</i>           It contains well written, well thought and well           explained computer science and programming articles         </p>        </div></body></html>Output:HTML <i> TagExample 2: In this example, we have used <i> tag & <p> tag to illustrate the difference in the text appearance while rendering it.HTML<!DOCTYPE html><html><head>    <title>HTML Italic Tag</title></head>    <body>    <h1>GeeksforGeeks</h1>    <h3>HTML i tag</h3>      <p>This is normal text written inside p tag</p>              <!--HTML <i>(italic) tag is used here-->    <i>This text is in italic font style</i> </body></html>Output:Italic font-style using HTML <i> TagExample 3: A text can be written in italics using CSS also.",INS
+i,"When the CSS font-style property is set to italic, then the text can be seen as follows:HTML<!DOCTYPE html><html><head>    <title>HTML Italic Tag</title></head>  <body>    <h1>GeeksforGeeks</h1>    <h3>HTML i tag</h3>          <!--Example for font-style: italic -->    <p style=""font-style: italic;"">         This text content is in italic font.",EXP
+i,"The <i> HTML element represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others.",DESC
+i,"Historically, these have been presented using italicized type, which is the original source of the <i> naming of this element.",DESC
+b,Example: This simple code example illustrates highlighting the text by making it as bold text in HTML.HTML<!DOCTYPE html><html><body>    <h1>GeeksforGeeks</h1>    <h3>HTML b tag</h3>    <p>      A <b>Computer Science portal</b> for geeks.,EXP
+b,"It contains well written, well thought and      well explained <b>computer science and       programming articles.</b>    </p>  </body></html>Output:The <b> tag in HTML is used to specify the bold text without any extra importance.",EXP
+b,The text is written within <b> tag display in bold size.,DESC
+b,You can do that by using font-weight: bold; property in CSS.,INFO
+b,"The <b> HTML element is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance.",DESC
+b,"This was formerly known as the Boldface element, and most browsers still draw the text in boldface.",INFO
+b,"However, you should not use <b> for styling text; instead, you should use the CSS font-weight property to create boldface text, or the <strong> element to indicate that text is of special importance.",INFO
+section,"Section tag defines the section of documents such as chapters, headers, footers or any other sections.",DESC
+section,The section tag divides the content into section and subsections.,DESC
+section,The section tag is used when requirements of two headers or footers or any other section of documents needed.,INFO
+section,Section tag grouped the generic block of related contents.,DESC
+section,"The <section> HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it.",DESC
+section,"Sections should always have a heading, with very few exceptions.",INFO
+code,The <code> tag in HTML is used to define the piece of computer code.,DESC
+code,During the creation of web pages sometimes there is a need to display computer programming code.,INFO
+code,It could be done by any basic heading tag of HTML but HTML provides a separated tag which is <code>.,INFO
+code,The code tag is a specific type of text which represents computer output.,DESC
+code,The <code> HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.,DESC
+code,"By default, the content text is displayed using the user agent's default monospace font.",INFO
+label,"The <label> tag in HTML is used to provide a usability improvement for mouse users i.e, if a user clicks on the text within the <label> element, it toggles the control.",DESC
+label,"The <label> tag defines the label for <button>, <input>, <meter>, <output>, <progress>, <select>, or <textarea> element.The <label> tag can be used in two ways: Firstly, use <label> tag by providing the <input> and id attribute.",INFO
+label,"The <label> tag needs a for attribute whose value is the same as input id.Alternatively, <input> tag use directly inside the <label> tag.",INS
+label,"In this case, the for and id attributes are not needed because the association is implicit.Syntax:  <label> form content... </label>Attribute Value: for: It refers to the input control that this label is for.",EXP
+label,The <label> HTML element represents a caption for an item in a user interface.,DESC
+label,Associating a <label> with an <input> element offers some major advantages:,INFO
+label,"To associate the <label> with an <input> element, you need to give the <input> an id attribute.",INS
+label,The <label> then needs a for attribute whose value is the same as the input's id.,INS
+label,"Alternatively, you can nest the <input> directly inside the <label>, in which case the for and id attributes are not needed because the association is implicit:",INS
+label,The form control that a label is labeling is called the labeled control of the label element.,INFO
+ol,"In this article, we will know HTML <ol> Tag, & its implementation through the examples.",TIP
+ol,"The <ol> tag is for an ordered list, an ordered list can be numerical or alphabetical.",DESC
+ol,"Inside the <ol> tag you have to make a list <li> of items that will follow the order.Syntax:<ol>
+   <li>Item1</li>
+   <li>Item2</li>
+   <li>Item3</li>
+</ol>Accepted attributes: HTML <ol> compact Attribute: It defines the list should be compacted (compact attribute is not supported HTML5.",INS
+ol,Use CSS instead.,EXP
+ol,The <ol> HTML element represents an ordered list of items ÁEEEEEÁEEEEEEEEÁEEEEEÁEÁEEEEEÁEEEEEEEE typically rendered as a numbered list.,DESC
+ul,"In this article, we will know the HTML <ul> Tag & its implementation.",TIP
+ul,The <ul> tag in HTML is used to define the unordered list item in an HTML document.,DESC
+ul,It contains the list items <li> element.,DESC
+ul,The <ul> tag requires an opening and closing tag.,INFO
+ul,"The <ul> HTML element represents an unordered list of items, typically rendered as a bulleted list.",DESC
+li,The <li> tag in HTML is used to define the list item in an HTML document.,DESC
+li,It is used within an Ordered List <ol> or Unordered List <ul>.,INS
+li,"The <li> tag requires a starting and end tag.Note: The end tag can be omitted if the list item is immediately followed by another <li> element, or if there is no more content in its parent element.",INS
+li,Syntax: <li> List Items </li>Attribute Value: value: The value attribute is used to specify the starting number of the list item.,INS
+li,The <li> HTML element is used to represent an item in a list.,DESC
+li,"It must be contained in a parent element: an ordered list (<ol>), an unordered list (<ul>), or a menu (<menu>).",INS
+li,"In menus and unordered lists, list items are usually displayed using bullet points.",INFO
+li,"In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.",INFO
+html,The <html> tag represents the root of an HTML document.,DESC
+html,The <html> tag is the container for all other HTML elements (except for the<!DOCTYPE> tag).,DESC
+html,"Note: You should always include thelang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.",INFO
+html,The <html> tag also supports the Global Attributes in HTML.,INFO
+html,Most browsers will display the <html> element with the following default values: ,INFO
+html,The <html> tag in HTML is used to define the root of HTML and XHTML documents.,DESC
+html,The <html> tag tells the browser that it is an HTML document.,DESC
+html,It is the second outer container for everything that appears in an HTML document followed by the <!DOCTYPE> tag.,INFO
+html,The <html> tag requires a starting and end tag.Syntax:  <html> HTML Contents... </html>Attribute Value: The <html> tag contains single attribute xmlns whose attribute value is http://www.w3.org/1999/xhtml.,INS
+html,"The <html> HTML element represents the root (top-level element) of an HTML document, so it is also referred to as the root element.",DESC
+title,"The <title> tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.",DESC
+title,The <title> tag is required in HTML documents! ,INFO
+title,The <title> element:,EXP
+title,Note: You can NOT have more than one <title> element in an HTML document.,INFO
+title,The <title> tag also supports the Global Attributes in HTML.,INFO
+title,Most browsers will display the <title> element with the following default values: ,INFO
+title,The <title> tag in HTML is used to define the title of HTML document.,DESC
+title,It sets the title in the browser toolbar.,DESC
+title,It provides the title for the web page when it is added to favorites.,INFO
+title,"It displays the title for the page in search engine results.Note: You can NOT have more than one <title> element in an HTML document.Syntax:  <title> Title name </title>Example:  HTML<!DOCTYPE html><html>    <head>        <title>title Tag</title>    </head>    <body>        <h1>GeeksforGeeks</h1>        <h2><title> Tag</h2>          <p>Welcome to GeeksforGeeks!</p>      </body></html>                   Output:  Supported Browser:  Google ChromeInternet ExplorerFirefoxOperaSafari My Personal Notes
+arrow_drop_upSave",INFO
+link,The <link> tag defines the relationship between the current document and an external resource.,DESC
+link,The <link> tag is most often used to link to external style sheets or to add a favicon to your website.,DESC
+link,"The <link> element is an empty element, it contains attributes only.",INFO
+link,The <link> tag also supports the Global Attributes in HTML.,INFO
+link,The <link> tag also supports the Event Attributes in HTML.,INFO
+link,Most browsers will display the <link> element with the following default values: ,EXP
+link,The <link> tag in HTML is used to define a link between a document and an external resource.,DESC
+link,The link tag is mainly used to link to external style sheets.,DESC
+link,This element can appear multiple times but it goes only in the head section.,INFO
+link,"The link element is empty, it contains attributes only.",INFO
+img,The <img> tag is used to embed an image in an HTML page.,DESC
+img,Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image.,INFO
+img,The <img> tag has two required attributes:,INS
+img,"Tip: To link an image to another document, simply nest the <img> tag inside an <a> tag (see example below).Browser SupportElement<img>YesYesYesYesYesAttributesAttributeValueDescriptionalttextSpecifies an alternate text for an imagecrossoriginanonymous  use-credentialsAllow images from third-party sites that allow cross-origin access to be used with canvasheightpixelsSpecifies the height of an imageismapismapSpecifies an image as a server-side image maploadingeagerlazySpecifies whether a browser should load an image immediately or to defer     loading of images until some conditions are metlongdescURLSpecifies a URL to a detailed description of an imagereferrerpolicyno-referrerno-referrer-when-downgradeorigin    origin-when-cross-originunsafe-urlSpecifies which referrer information to use when fetching an imagesizessizesSpecifies image sizes for different page layoutssrcURLSpecifies the path to the imagesrcsetURL-list Specifies a list of image files to use in different situationsusemap#mapnameSpecifies an image as a client-side image mapwidthpixelsSpecifies the width of an imageGlobal AttributesThe <img> tag also supports the Global Attributes in HTML.Event AttributesThe <img> tag also supports the Event Attributes in HTML.More ExamplesExampleAlign image (with CSS):    <img src=""smiley.gif"" alt=""Smiley face"" width=""42"" height=""42"" style=""vertical-align:bottom"">    <img src=""smiley.gif"" alt=""Smiley face"" width=""42"" height=""42"" style=""vertical-align:middle"">    <img src=""smiley.gif"" alt=""Smiley face"" width=""42"" height=""42"" style=""vertical-align:top"">    <img src=""smiley.gif"" alt=""Smiley face"" width=""42"" height=""42"" style=""float:right"">    <img src=""smiley.gif"" alt=""Smiley face"" width=""42"" height=""42"" style=""float:left"">Try it Yourself ÁEEEEEÁE»ExampleAdd image border (with CSS):    <img src="".gif"" alt=""Smiley face"" width=""42"" height=""42""     style=""border:5px solid black"">Try it Yourself ÁEEEEEÁE»ExampleAdd left and right margins to image (with CSS):    <img src="".gif"" alt=""Smiley face"" width=""42"" height=""42""     style=""vertical-align:middle;margin:0px 50px"">Try it Yourself ÁEEEEEÁE»ExampleAdd top and bottom margins to image (with CSS):    <img src="".gif"" alt=""Smiley face"" width=""42"" height=""42"" style=""vertical-align:middle;margin:50px 0px"">Try it Yourself ÁEEEEEÁE»ExampleHow to insert images from another folder or from another web site:    <img src=""s/stickman.gif"" alt=""Stickman"" width=""24"" height=""39"">    <img src=""https://www.w3schools.com/images/lamp.jpg"" alt=""Lamp"" width=""32""     height=""32"">Try it Yourself ÁEEEEEÁE»ExampleHow to add a hyperlink to an image:    <a href=""//www.w3schools.com""><img src=""w3html.gif""     alt=""W3Schools.com"" width=""100"" height=""132""></a>Try it Yourself ÁEEEEEÁE»ExampleHow to create an image map, with clickable regions. Each region is a hyperlink:    <img src=""ace.jpg"" alt=""Workplace"" usemap=""#workmap"" width=""400""     height=""379""><map name=""workmap"">ÁEEEEEÁE  <area shape=""    coords=""34,44,270,350"" alt=""Computer"" href=""computer.htm"">ÁEEEEEÁE  <area     shape=""coords=""290,172,333,250"" alt=""Phone"" href=""phone.htm"">ÁEEEEEÁE      <area shape="""" coords=""337,300,44"" alt=""Cup of coffee"" href=""coffee.htm"">    </map>Try it Yourself ÁEEEEEÁE»Related PagesHTML tutorial: HTML ImagesHTML DOM reference: Image ObjectCSS Tutorial: Styling ImagesDefault CSS SettingsMost browsers will display the <img> element with the following default values:Example    img { ÁEEEEEÁE  display: inline-block;} Try it Yourself ÁEEEEEÁE»ÁEEEEEEÁEEEEEEÁE® PreviousComplete HTML ReferenceNext ÁEEEEEEÁEEEEEEÁE¯¯¯3Schoolss                          ",TIP
+img,HTML <img> tag is used to add image inside webpage/website.,DESC
+img,"Nowadays website does not directly add images to a web page, as the images are linked to web pages by using the <img> tag which holds space for the image.Syntax:  <img src="""" alt="""" width="""" height="""">Attributes: The <img> tag has following attributes.",INS
+img,src: It is used to specify the path to the image.alt: It is used to specify an alternate text for the image.,INS
+img,It is useful as it informs the user about what the image means and also due to any network issue if the image cannot be displayed then this alternate text will be displayed.crossorigin: It is used to import images from third-party sites that allow cross-origin access to be used with canvas.height: It is used to specify the height of the image.width: It is used to specify the width of the image.ismap: It is used to specify an image as a server-side image map.loading: It is used to specify whether a browser should defer loading of images until some conditions are met or load an image immediately.longdesc: It is used to specify a URL to a detailed description of an image.referrerpolicy: It is used to specify which referrer information to use when fetching an image i.e.,INFO
+img,The <img> HTML element embeds an image into the document.,DESC
+img,The above example shows usage of the <img> element:,EXP
+video,"The <video> tag is used to embed video content in a document, such as a movie clip or other video streams.",DESC
+video,The <video> tag contains one or more<source> tags with different video sources. The browser will choose the first source it supports.,INS
+video,The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.,INS
+video,The <video> tag also supports the Global Attributes in HTML.,INFO
+video,The <video> tag also supports the Event Attributes in HTML.,INFO
+video,"In this article, we will know HTML5 Video, along with knowing the different ways to add the videos to the HTML page & understanding its implementation through the examples.",INFO
+video,"Before HTML 5 came into existence, videos could only be played in a browser using a plugin like flash.",INFO
+video,"But after the release of HTML 5, adding a video to a webpage is as easy as adding an image.",INFO
+video,The HTML5 ÁEEEEEEÁEÁEEEEEEvideoÁEEEEEEÁEÁEEEEEE element specifies a standard way to embed a video on a web page.,DESC
+video,The <video> HTML element embeds a media player which supports video playback into the document.,DESC
+iframe,Tip: Use CSS to style the <iframe> (see example below).ÁEEEEEÁE ,TIP
+iframe,The <iframe> tag also supports the Global Attributes in HTML.,TIP
+iframe,The <iframe> tag also supports the Event Attributes in HTML.,TIP
+iframe,Most browsers will display the <iframe> element with the following default values: ,INFO
+iframe,"The <iframe> HTML element represents a nested browsing context, embedding another HTML page into the current one.",DESC
+iframe,Each embedded browsing context has its own session history and document.,INFO
+iframe,The browsing context that embeds the others is called the *parent browsing context*.,DESC
+iframe,"The *topmost* browsing context ÁEEEEEEÁEÁEEEEEE the one with no parent ÁEEEEEEÁEÁEEEEEE is usually the browser window, represented by the Window object.",INS
+table,The <table> tag also supports the Global Attributes in HTML.,INFO
+table,The <table> tag also supports the Event Attributes in HTML.,INFO
+table,Most browsers will display the <table> element with the following default values:,INFO
+table,"The <table> HTML element represents tabular data ÁEEEEEEÁEÁEEEEEE that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.",DESC
+tr,The <tr> tag defines a row in an HTML table.,DESC
+tr,A <tr> element contains one or more <th> or <td> elements.,INS
+tr,The <tr> tag also supports the Global Attributes in HTML.,INFO
+tr,The <tr> tag also supports the Event Attributes in HTML.,INFO
+tr,Most browsers will display the <tr> element with the following default values: ,INFO
+tr,The <tr> tag is used to define a row in an HTML table.,DESC
+tr,"The <tr> element contains multiple <th> or <td> elements.Syntax:<tr>.....</tr>Attributes:align: Align the content.bgcolor: Specify background of rowchar: Align the content to a charactercharoff: Set the number of charactervalign: Vertical align the contentExample:<!DOCTYPE html><html>  <head>    <title>tr tag</title>    <style>        body {            text-align: center;        }                  h1 {            color: green;        }                  th {            color: blue;        }                  table,        tbody,        td {            border: 1px solid black;            border-collapse: collapse;        }    </style></head>  <body>    <center>        <h1>GeeksforGeeks</h1>        <h2>tr Tag</h2>        <table>            <thead>                <!-- tr tag starts here -->                <tr>                    <th>Name</th>                    <th>User Id</th>                </tr>                <!-- tr tag end here -->            </thead>            <tbody>                <tr>                    <td>Shashank</td>                    <td>@shashankla</td>                </tr>                <tr>                    <td>GeeksforGeeks</td>                    <td>@geeks</td>                </tr>            </tbody>        </table>    </center></body>  </html>Output:Supported Browsers: The browsers supported by HTML <tr> Tag are listed below:Google ChromeInternet ExplorerFirefoxApple SafariOperaMy Personal Notes
+arrow_drop_upSave",INS
+tr,The <tr> HTML element defines a row of cells in a table.,DESC
+tr,The row's cells can then be established using a mix of <td> (data cell) and <th> (header cell) elements.,INS
+tr,"To provide additional control over how cells fit into (or span across) columns, both <th> and <td> support the colspan attribute, which lets you specify how many columns wide the cell should be, with the default being 1.",INFO
+td,The <td> tag defines a standard data cell in an HTML table.,DESC
+td,The text in <td> elements are regular and left-aligned by default.,INFO
+td,The <td> tag also supports the Global Attributes in HTML.,INFO
+td,The <td> tag also supports the Event Attributes in HTML.,INFO
+td,Most browsers will display the <td> element with the following default values: ,INFO
+td,The <td> tag is used to define a standard cell in an HTML table.Syntax:<td>........</td>Types of cells:Header cells: contains header information(<th>)Standard cells: contains data(<td>)The text in <th> elements are bold and centered for heading by default.The text in <td> elements are regular and left-aligned for data by default.Attributes: There are many attributes supported by HTML4.1 but removed from HTML5 are listed below:abbr: This attribute is used as abbreviated version of the text content in a header cell.align: Set the alignment the text content.axis: Categorizes header cells.bgcolor: Set the background color of a header cell.char: Aligns the content in a header cell to a character.charoff: It is used to sets the number of characters that will be aligned from the character specified by the char attribute.,DESC
+td,"The value of these attributes are in numeric form.colspan: Number of columns a header cell should span.headers: Specifies multiple header cells a cell is related to.height: Set the height of a header cell.nowrap: It specifies that the content inside a header cell should not wrap.rowspan: Set the number of rows a header cell should span.scope: It is used to specify the score of header content.sorted: It is used to sort the direction of a column.valign: It is used to set the vertical alignment of text content.width: It is used to set the width of a header cellExample:<!DOCTYPE html> <html>     <head>         <title>td tag</title>         <style>             body {                 text-align:center;             }             h1 {                 color:green;             }             th {                 color:blue;             }             table, tbody, td {                 border: 1px solid black;                 border-collapse: collapse;             }         </style>     </head>     <body>         <center>         <h1>GeeksforGeeks</h1>         <h2>td Tag</h2>         <table>             <thead>                 <tr>                     <th>Name</th>                     <th>User Id</th>                 </tr>             </thead>             <tbody>                 <tr>                     <td>Shashank</td>                     <td>@shashankla</td>                 </tr>                     <tr>                     <td>GeeksforGeeks</td>                     <td>@geeks</td>                 </tr>             </tbody>         </table>         </center>     </body> </html>                                     Output:Supported Browsers: The browser supported by td tag are listed belowGoogle ChromeEdgeFirefoxSafariOperaMy Personal Notes
+arrow_drop_upSave",INS
+td,The <td> HTML element defines a cell of a table that contains data.,DESC
+td,It participates in the table model.,INFO
+em,The <em> tag is used to define emphasized text. The content inside is typically displayed in italic.,DESC
+em,"A screen reader will pronounce the words in <em> with an emphasis, using verbal stress.",INFO
+em,The <em> tag also supports the Global Attributes in HTML.,INFO
+em,The <em> tag also supports the Event Attributes in HTML.,INFO
+em,Most browsers will display the <em> element with the following default values:,INFO
+em,"The <em> tag in HTML is a phrase tag and used to emphasize the text content.Note: This effect can be achieved by using CSS property.Syntax:<em> Contents... </em>Example:<!DOCTYPE html><html>  <head>    <title>        HTML em Tag    </title></head>  <body>    <h1>GeeksforGeeks</h1>      <h2>HTML em Tag</h2>          <em>Emphasized text content</em></body>  </html>                    Output:Supported Browsers: The browser supported by HTML <em> tag are listed below:Google ChromeInternet ExplorerFirefoxSafariOperaMy Personal Notes
+arrow_drop_upSave",DESC
+em,The <em> HTML element marks text that has stress emphasis.,DESC
+em,"The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis.",INS
+head,The <head> element is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag.,DESC
+head,The following elements can go inside the <head> element:,INFO
+head,The <head> tag also supports the Global Attributes in HTML.,INFO
+head,Most browsers will display the <head> element with the following default values: ,INFO
+hr,The <hr> tag defines a thematic break in an HTML page (e.g. a shift of topic).,DESC
+hr,The <hr> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page.,DESC
+hr,The <hr> tag also supports the Global Attributes in HTML.,INFO
+hr,The <hr> tag also supports the Event Attributes in HTML.,INFO
+hr,Most browsers will display the <hr> element with the following default values: ,INFO
+strong,The <strong> tag is used to define text with strong importance. The content inside is typically displayed inbold.,DESC
+strong,The <strong> tag also supports the Global Attributes in HTML.,INFO
+strong,The <strong> tag also supports the Event Attributes in HTML.,INFO
+strong,Most browsers will display the <strong> element with the following default values:,INFO
+style,The <style> tag is used to define style information (CSS) for a document.,DESC
+style,Inside the <style> element you specify how HTML elements should render in a browser.,INS
+style,The <style> tag also supports the Global Attributes in HTML.,INFO
+style,The <style> tag also supports the Event Attributes in HTML.,INFO
+style,Most browsers will display the <style> element with the following default values: ,INFO
+style,"Now letEEEEEEEEs look at various attributes of style and what else the tag supports.Syntax:
+<tagname style="":value;"">
+The tagname includes <p>, <body>, from <h1> to <h6> etc.The property is borrowed from CSS like color, font-size, font-family etc.The value is also borrowed from CSS.HTML Font Family: The font family changes the font style of a text and can be used in any text writing tag like <p> or heading tag.oossrrrp",INS
+style,"If you include multiple <style> and <link> elements in your document, they will be applied to the DOM in the order they are included in the document EEEEEEEE make sure you include them in the correct order, to avoid unexpected cascade issues.",INS
+i,The <i> tag defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.,DESC
+i,"The <i> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.",DESC
+i,"Use the <i> element only when there is not a more appropriate semantic element, such as:",INFO
+i,The <i> tag also supports the Global Attributes in HTML.,INFO
+i,The <i> tag also supports the Event Attributes in HTML.,INFO
+i,Most browsers will display the <i> element with the following default values:,INFO
+b,The <b> tag also supports the Global Attributes in HTML.,INFO
+b,The <b> tag also supports the Event Attributes in HTML.,INFO
+b,Most browsers will display the <b> element with the following default values:,INFO
+section,The <section> tag defines a section in a document.,DESC
+section,The <section> tag also supports the Global Attributes in HTML.,INFO
+section,The <section> tag also supports the Event Attributes in HTML.,INFO
+section,Most browsers will display the <section> element with the following default values:,INFO
+code,The <code> tag is used to define a piece of computer code. The content inside is displayed in the browser's default monospace font. ,DESC
+code,The <code> tag also supports the Global Attributes in HTML.,INFO
+code,The <code> tag also supports the Event Attributes in HTML.,INFO
+code,Most browsers will display the <code> element with the following default values:,INFO
+label,The <label> tag defines a label for several elements:,EXP
+label,Tip: The for attribute of <label> must be equal to the id attribute of the related element to bind them together.ÁE A label can also be bound to an element by placing the element inside the <label> element.ÁE ,TIP
+label,The <label> tag also supports the Global Attributes in HTML.,INFO
+label,The <label> tag also supports the Event Attributes in HTML.,INFO
+label,Most browsers will display the <label> element with the following default values:,INFO
+label,Multiple labels can be associated with the same form control:,INFO
+label,"Elements that can be associated with a <label> element include <button>, <input> (except for type=""hidden""), <meter>, <output>, <progress>, <select> and <textarea>.",INFO
+ol,The <ol> tag also supports the Global Attributes in HTML.,INFO
+ol,The <ol> tag also supports the Event Attributes in HTML.,INFO
+ol,Most browsers will display the <ol> element with the following default values:,INFO
+ol,The <ol> HTML element represents an ordered list of items EEEEEEEE typically rendered as a numbered list.,DESC
+ul,The <ul> tag also supports the Global Attributes in HTML.,INFO
+ul,The <ul> tag also supports the Event Attributes in HTML.,INFO
+ul,Most browsers will display the <ul> element with the following default values:,INFO
+li,The <li> tag defines a list item.,DESC
+li,"The <li> tag is used inside ordered lists(<ol>), unordered lists (<ul>), and inmenu lists (<menu>).",DESC
+li,The <li> tag also supports the Global Attributes in HTML.,INFO
+li,The <li> tag also supports the Event Attributes in HTML.,INFO
+li,Most browsers will display the <li> element with the following default values: ,INFO
+div,The <div> tag defines a division or a section in an HTML document.,DESC
+div,The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript.,INS
+div,The <div> tag is easily styled by using the class or id attribute.,INFO
+div,Any sort of content can be put inside the <div> tag!ÁE ,INFO
+div,"Note: By default, browsers always place a line break before and after the  <div> element.",TIP
+div,The <div> tag also supports the Global Attributes in HTML.,INFO
+div,The <div> tag also supports the Event Attributes in HTML.,INFO
+div,Most browsers will display the <div> element with the following default values:,INFO
+heading,HTML headings are titles or subtitles that you want to display on a webpage.,DESC
+heading,HTML headings are defined with the <h1> to <h6> tags.,DESC
+heading,<h1> defines the most important heading. <h6> defines the least important heading.,DESC
+heading,Search engines use the headings to index the structure and content of your web pages.,INFO
+heading,Users often skim a page by its headings.,TIP
+heading,It is important to use headings to show the document structure.,TIP
+heading,"<h1> headings should be used for main headings, followed by <h2> headings, then the less important 
+<h3>, and so on.",DESC
+heading,Each HTML heading has a default size.,INFO
+heading,"However, you can specify the size for any heading 
+with the style attribute, using the CSS font-size property:",INFO
+heading,W3Schools' tag reference contains additional information about these tags and their attributes.,EXP
+styles,"The HTML style attribute is used to add styles to an element, such as color, font, size, and more.",DESC
+styles,"Setting the style of an HTML element, can be done with the style attribute.",DESC
+styles,The HTML style attribute has the following syntax:,EXP
+styles,The property is a CSS property.,INFO
+styles,The value is a CSS value.,INFO
+styles,"The CSS background-color property defines the background color 
+for an HTML element.",DESC
+styles,"The CSS color property defines the text color for 
+an HTML element:",DESC
+styles,"The CSS font-family property defines the font to be used  
+for an HTML element:",DESC
+styles,"The CSS font-size property defines the text size for 
+an HTML element:",DESC
+styles,The CSS text-align property defines the horizontal text alignment for an HTML element:,DESC
