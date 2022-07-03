@@ -5,7 +5,7 @@ from nltk import sent_tokenize
 
 from app.api.url import generate_url
 
-test_link = "https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_background-color"
+
 # Function to scrape html styling
 def html_styling_scrapper(property):
     """
@@ -20,14 +20,27 @@ def html_styling_scrapper(property):
 
     # Extract description from the page
     content = soup.find('div', {'class': 'tutorial-content'})
-    sent = content.find('p').text
-    desc = sent_tokenize(sent)
+    if content:
+        sent = content.find('p')
+        desc = []
+        if sent.text:
+            desc = sent_tokenize(sent.text)
 
-    # Extract examples from the page
-    examples = content.find('pre').text
+        # Extract examples from the page
+        examples = []
+        if content.find('pre'):
+            examples = content.find('pre').text
 
-    return {
-        'property': property,
-        'desc': desc,
-        'examples': examples
-    }
+        return {
+            'property': property,
+            'desc': desc,
+            'examples': examples
+        }
+    
+    else:
+        print('No content found for ' + property)
+        return {
+            'property': property,
+            'desc': None,
+            'examples': None
+        }

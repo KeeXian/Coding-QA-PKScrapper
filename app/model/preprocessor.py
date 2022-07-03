@@ -21,7 +21,7 @@ def lemmatize_text(text):
                     "R": wordnet.ADV}
         return tag_dict.get(tag, wordnet.NOUN)
 
-    return " ".join([lemmatizer.lemmatize(word, get_wordnet_pos(word)) for word in tokenizer.tokenize(text) if word in english_words])
+    return " ".join([lemmatizer.lemmatize(word, get_wordnet_pos(word)) for word in tokenizer.tokenize(text)])
 
 # Function to perform text preprocessing
 def text_preprocessing(text):
@@ -32,3 +32,7 @@ def text_preprocessing(text):
     text = re.sub('<[^<]+?>', 'TAG', text)
     text = lemmatize_text(text)
     return text
+
+if __name__ == '__main__':
+    text = "The <a> tag defines a hyperlink, which is used to link from one page to another."
+    print(text_preprocessing(text))

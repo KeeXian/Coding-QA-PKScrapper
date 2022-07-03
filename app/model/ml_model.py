@@ -29,7 +29,9 @@ def build_model(csv_file, model_file, glove_file, rule_file):
     y = data.iloc[:, 2].values
     y = pd.Series(labelencoder_y.fit_transform(y))
     labels = labelencoder_y.classes_
-   
+    
+    # Load the model
+    print('test')
     rules = json.load(open(rule_file))
     classifier = RuleAugmentedEstimator(model_file, glove_file, rules, labels)
     return classifier, labels

@@ -7,6 +7,19 @@ client = pymongo.MongoClient(conn, connect=False)
 db = client.ProgrammingKnowledge
 print('Successfully established connection to database')
 
+# Load concept data from database
+def load_concepts(concept_name, language):
+    # Retrieve language id
+    language_id = db.PO_language.find_one({'name': language.upper()})['_id']
+
+    # Retrieve concept data
+    collection = db.Concept
+    concept = collection.find_one({'name': concept_name.lower(), 'language': language_id})
+    if concept is not None:
+        return concept
+    else:
+        return None
+
 # Reset collections
 def reset_collections():
     db.PO_language.drop()

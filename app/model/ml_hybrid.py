@@ -64,17 +64,17 @@ class RuleAugmentedEstimator():
          return self.__str__
 
     def get_mean_vector(self, sentence: str) -> np.array:
-        words = sorted(list(sentence.split()))
-        word_vectors = []
-
+        words = sorted(list(sentence.lower().split()))
+        existed_words = []
         for word in words:
             try:
                 self.glove_model.get_vector(word)
+                existed_words.append(word)
             except:
                 words.remove(word)
 
         if len(words) >= 1:
-            return np.mean(self.glove_model[words], axis=0)
+            return np.mean(self.glove_model[existed_words], axis=0)
         else:
             return np.empty((300))
 

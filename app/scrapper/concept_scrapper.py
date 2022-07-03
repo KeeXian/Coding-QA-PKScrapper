@@ -13,7 +13,6 @@ def concept_scrapper(tag=''):
         'desc': [],
         'examples': set(()),
         'syntax': set(()),
-        'instruction': '',
     }
 
     # Special case for h1 to h6 tags
@@ -25,13 +24,20 @@ def concept_scrapper(tag=''):
         for scrapper in scrappers:
             concept = scrapper(tag, concept)
         
-    return {
-        'tag': tag,
-        'desc': concept['desc'],
-        'examples': list(concept['examples']),
-        'syntax': list(concept['syntax']),
-        'instruction': concept['instruction'],
-    }
+    if len(concept['desc']):
+        return {
+            'tag': tag,
+            'desc': concept['desc'],
+            'examples': list(concept['examples']),
+            'syntax': list(concept['syntax']),
+        }
+    else:
+        return {
+            'tag': tag,
+            'desc': [],
+            'examples': [],
+            'syntax': [],
+        }
 
 
 def w3school_scrapper(tag, concept):
@@ -45,7 +51,7 @@ def w3school_scrapper(tag, concept):
     try:
         if requests.get(url).status_code != 200:
             url = generate_url('w3schools', 'html', tag)
-            if requests.get(url).status_code != 200:
+            if requests.get(url).status_code != 200 or 'tags' not in url:
                 print("W3School Url not found. Skipping...")
                 return concept
 
@@ -76,9 +82,11 @@ def w3school_scrapper(tag, concept):
         
         # Extract examples
         examples = soup.find_all('div', {'class': 'w3-example'})
-        for example in examples:
-            e = example.find('div', {'class': 'w3-code'}).text
-            concept['examples'].add(e)
+        if examples:
+            for example in examples:
+                e = example.find('div', {'class': 'w3-code'})
+                if e:
+                    concept['examples'].add(e.text)
 
         print('Successfully scraped ' + tag + ' from W3Schools')
     else:
@@ -100,7 +108,7 @@ def dev_mozilla_scrapper(tag, concept):
             else:
                 url = generate_url('mdnwebdocs', 'html', tag)
             responses = requests.get(url)
-            if responses.status_code != 200:
+            if responses.status_code != 200 or 'HTML/Element' not in url:
                 print("Dev Mozilla Url not found. Skipping...")
                 return concept
     except Exception as e:
@@ -153,7 +161,7 @@ def geek_scrapper(tag, concept):
     try:
         if requests.get(url).status_code != 200:
             url = generate_url('geeksforgeeks', 'html', tag)
-            if requests.get(url).status_code != 200:
+            if 'html' not in url or requests.get(url).status_code != 200:
                 print("Geek Url not found. Skipping...")
                 return concept
     except Exception as e:
@@ -195,6 +203,9 @@ def tutorialspoint_scrapper(tag, concept):
         if requests.get(url).status_code != 200:
             url = generate_url('tutorialspoint', 'html', tag)
         
+        if 'html' not in url:
+            raise Exception('Invalid URL')
+
         responses = requests.get(url)    
     except Exception as e:
         print("TutorialsPoint URL not found. Skipping...")
@@ -233,6 +244,8 @@ def java_tpoint_scrapper(tag, concept):
                 if requests.get(url).status_code != 200:
                     url = generate_url('javatpoint', 'html', tag)
 
+        if 'html' not in url:
+            raise Exception('Invalid URL')
     except:
         print('JavaTpoint URL not found. Skipping...')
         return concept
@@ -273,7 +286,7 @@ def tutorial_republic_scrapper(tag, concept):
     try:
         if requests.get(url).status_code != 200:
             url = generate_url('tutorialrepublic', 'html', tag)
-            if requests.get(url).status_code != 200:
+            if 'html' not in url or requests.get(url).status_code != 200:
                 print('Tutorial Republic URL not found. Skipping...')
                 return concept
     except:
@@ -310,7 +323,7 @@ def tutorial_republic_syntax_scrapper(tag, concept):
         if requests.get(url).status_code != 200:
             # Try to generate url
             url = generate_url('tutorialrepublic', 'html', tag)
-            if requests.get(url).status_code != 200:
+            if 'html' not in url or requests.get(url).status_code != 200:
                 print('Tutorial Republic URL not found. Skipping...')
                 return concept
     except:
@@ -350,7 +363,7 @@ def techonnet_scrapper(tag, concept):
     try:
         if requests.get(url).status_code != 200:
             url = generate_url('techonnet', 'html', tag)
-            if requests.get(url).status_code != 200:
+            if 'html/elements' not in url or requests.get(url).status_code != 200:
                 print('TechOnNet URL not found. Skipping...')
                 return concept
     except:
@@ -391,7 +404,7 @@ def quackit_scrapper(tag, concept):
     try:
         if requests.get(url).status_code != 200:
             url = generate_url('quackit', 'html', tag)
-            if requests.get(url).status_code != 200:
+            if 'html/tags' not in url or requests.get(url).status_code != 200:
                 print('Quackit URL not found. Skipping...')
                 return concept
     except:
@@ -413,11 +426,13 @@ def quackit_scrapper(tag, concept):
         for p in main_div.find_all('p'):
             prev = p.find_previous_sibling('h2')
             if prev and prev.text == 'Syntax':
-                concept['instruction'] = p.text
+                concept['desc'].append(p.text)
                 break
         
         # Syntax
-        concept['syntax'].add(main_div.find('div', {'class': 'code-only'}).text)
+        syntax = main_div.find('div', {'class': 'code-only'})
+        if syntax:
+            concept['syntax'].add(syntax.text)
 
         # Example
         for form in main_div.find_all('form'):
@@ -440,7 +455,6 @@ scrappers = [
     tutorialspoint_scrapper,
     java_tpoint_scrapper,
     tutorial_republic_scrapper,
-    dev_mozilla_scrapper,
     tutorial_republic_syntax_scrapper,
     techonnet_scrapper,
     quackit_scrapper

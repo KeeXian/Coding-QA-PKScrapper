@@ -1,9 +1,14 @@
 {
     "tag": [
         ["contains", "tip", "TIP"],
+        ["contains", "is written as", "INS"],
         ["match", "^[0-9]*$", "NUMBER"],
         ["match", "^[0-9]*[.][0-9]*$", "NUMBER"],
-        ["contains", "^the [^ ]+( HTML| html)? tag|element", "DESC"],
-        ["contains", "^to", "INS"]
+        ["contains", "describe", "DESC"],
+        ["contains", "^to", "INS"],
+        ["length", 5, "INFO"]
+    ],
+    "others": [
+        ["contains", "^the [^ ]+( HTML| html)? tag|element", "DESC"]
     ]
 }
