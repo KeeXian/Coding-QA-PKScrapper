@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Scrapper Endpoint of the API
+
+This module hosts the scrapper endpoint of the API.
+This endpoint can be used to scrape the web for the given language and concept.
+Call the endpoint
+"""
+
 from flask_restful import Resource, reqparse
 import pandas as pd
 import os
@@ -7,21 +16,25 @@ import time
 from app.scrapper.concept_scrapper import *
 from app.scrapper.po_language_scrapper import *
 from app.scrapper.html_style_scrapper import *
-from app.scrapper.atr_scrapper import *
 
 # Import models
 from app.model.ml_model import *
 
 class Scrapper(Resource):
     def get(self):
-
-        # Load the model
+        '''
+        The GET request method is used for the following purposes
+        1. Load the data from the csv file
+        2. Load the labels from the csv file
+        3. Load the Glove embedding
+        4. Load the rules from the json file
+        5. Ensure that the model is loaded
+        '''
         start = time.time()
         model, labels =  build_model('app/resources/data_test.csv', 'app/resources/model.sav', 'app/resources/glove.6B.300d.gs', 'app/resources/rules.json')
         end = time.time()
         print('Model loaded in: ' + str(end - start))
 
-        # Check if model is loaded
         if model is not None:
             return {   
                 'status': 200,
@@ -34,6 +47,14 @@ class Scrapper(Resource):
         }
 
     def post(self):
+        '''
+        The POST request method is used for the following purposes
+        1. Scrape the website for the given language and concepts
+        2. Store the scrapped data in an object
+        2. Use the model to label the type of descriptions in the scraped data
+        4. Return the scraped data with the appropriate label ('DESC' or 'INS')
+        '''
+
         # Create parser
         parser = reqparse.RequestParser()
         parser.add_argument('po_language', type=str)
@@ -62,7 +83,7 @@ class Scrapper(Resource):
             if po_language:
                 language = language_scrapper(po_language)
 
-            if len(tags):
+            if tags and len(tags) > 0:
                 for tag in tags:
                     tag = tag.strip()
 
@@ -81,8 +102,8 @@ class Scrapper(Resource):
                             df = pd.concat([df, pd.DataFrame({'desc': [desc], 'tag': [predicted[i]]})])
                     
                     # Obtain the first 3 descriptions and instructions
-                    descriptive = df[df['tag'] == 'DESC'].head(3).values
-                    instruction = df[df['tag'] == 'INS'].head(3).values
+                    descriptive = df[df['tag'] == 'DESC'].head(3)['desc'].values
+                    instruction = df[df['tag'] == 'INS'].head(3)['desc'].values
                     
                     data.append({
                         'name': tag,
@@ -91,7 +112,8 @@ class Scrapper(Resource):
                         'example': concept['examples'],
                         'syntax': concept['syntax'],
                     })
-            if len(html_style):
+
+            if html_style and len(html_style) > 0:
                 for style in html_style:
                     style = style.strip()
 

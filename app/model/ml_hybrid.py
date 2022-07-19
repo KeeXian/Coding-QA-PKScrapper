@@ -1,3 +1,9 @@
+"""
+Hybrid Classifier Module
+
+    This module contains the functions to build the hybrid classifier
+    The main class is the RuleAugmentedEstimator
+"""
 from multiprocessing.dummy import Array
 import numpy as np
 import pandas as pd
@@ -16,15 +22,14 @@ class RuleAugmentedEstimator():
         Initializes the rule-augmented estimator by supplying the underlying
         sklearn estimator as well as the hard-coded rules.
         Args:
-            base_model: The underlying dnn classifier.
-              Must implement a fit and predict method.
+            base_model: The underlying estimator to use for predictions. Loaded from pickle file.
+              Must implement a predict method.
+            glove_filename: The path to the glove model.
             rules: The hard-coded rules in the format of a dictionary,
               with keys being the pandas dataframe column name, and the values
               being a tuple in the following form:
               
               (comparison operator, value, return value)
-              Acceptable comparison operators are:
-              "=", "<", ">", "<=", ">="
               Example:
               
               {"House Type": [
@@ -35,11 +40,13 @@ class RuleAugmentedEstimator():
                    ("<", 1000.0, 0.0),
                    (">=", 500000.0, 1.0)
               ]}
+            labels: The labels for the underlying estimator.
         Examples:
             The below example illustrates how an instance of the 
             RuleAugmentedEstimator class can be initialized with a trained 
-            sklearn GradientBoostingRegressor instance.
-            >>> gbr = GradientBoostingRegressor()
+            sklearn SupportVectorClassifier instance.
+            >>> model = "model.pkl"
+            >>> glove_filename = "glove.6B.300d.gs"
             >>> rules = {"House Type": [
                             ("=", "Penthouse", 1.0),
                             ("=", "Shack", 0.0)
@@ -48,7 +55,8 @@ class RuleAugmentedEstimator():
                             ("<", 1000.0, 0.0),
                             (">=", 500000.0, 1.0)
                         ]}
-            >>> ra_estimator = RuleAugmentedEstimator(gbr, rules)
+            >>> labels = ["Penthouse", "Shack"]
+            >>> svm_estimator = RuleAugmentedEstimator(model, glove_filename, rules, labels)
         """
         self.rules = rules
         self.base_model = pickle.load(open(base_model, 'rb'))
@@ -58,12 +66,19 @@ class RuleAugmentedEstimator():
         self.labels = labels
 
     def __repr__(self):
-        return "Rule Augmented Estimator:\n\n\t DNN Model: {}\n\t Rules: {}".format(self.base_model, self.rules)
+        return "Rule Augmented Estimator:\n\n\t SVM Model: {}\n\t Rules: {}".format(self.base_model, self.rules)
 
     def __str__(self):
          return self.__str__
 
     def get_mean_vector(self, sentence: str) -> np.array:
+        """
+        This function returns the mean vector of a given sentence.
+        Args:
+            sentence: The sentence to get the mean vector of.
+        Returns:
+            The mean vector of the sentence.
+        """
         words = sorted(list(sentence.lower().split()))
         existed_words = []
         for word in words:
@@ -78,8 +93,14 @@ class RuleAugmentedEstimator():
         else:
             return np.empty((300))
 
-    # Convert a batch of text data into word vectors
     def batch_get_mean_vector(self, input: list):
+        """
+        This function returns the mean vector of each sentence in a given list.
+        Args:
+            input: The list of sentences to get the mean vector of.
+        Returns:
+            The mean vector each sentence in the list.
+        """
         preprocessed_input = []
         for sentence in input:
             word_vectors = self.get_mean_vector(sentence)
@@ -90,7 +111,7 @@ class RuleAugmentedEstimator():
     def predict(self, X: pd.DataFrame) -> np.array:
         """Gets predictions for the provided feature data.
         
-        The predicitons are evaluated using the provided rules wherever possible
+        The predictions are evaluated using the provided rules wherever possible
         otherwise the underlying estimator is used.
         
         Args:

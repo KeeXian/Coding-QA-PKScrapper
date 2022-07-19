@@ -1,3 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Concept Scrapper
+
+This module scrapes the contents of a concept from various sources.
+To scrape the contents of a concept, you need to pass the tag of the concept and call the concept_scrapper function.
+Has a different method to scrape each of the selected sources
+Expected output:
+    {
+        'tag': tag,
+        'desc': [],
+        'examples': [],
+        'syntax': [],
+    }
+"""
 import re
 import requests
 from bs4 import BeautifulSoup
@@ -6,8 +21,13 @@ import logging
 
 from app.api.url import generate_url
 
-# Main function to scrape contents
 def concept_scrapper(tag=''):
+    """
+    This method is the main function to scrape the contents of a concept.
+    It calls all the scrapper functions in a loop to scrape the data from various sources.
+    tag: tagname, should be a string
+    returns concept object
+    """
     concept = {
         'tag': tag,
         'desc': [],
@@ -42,7 +62,10 @@ def concept_scrapper(tag=''):
 
 def w3school_scrapper(tag, concept):
     """
-    This function scrapes the w3school webpage and returns the data in a dictionary
+    This function scrapes the w3school webpage
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
     """
     tag = re.sub('\d', 'n', tag)
 
@@ -94,9 +117,15 @@ def w3school_scrapper(tag, concept):
 
     return concept
 
-# Scrape data from dev mozilla website
+
 def dev_mozilla_scrapper(tag, concept):
-    
+    """
+    This function scrapes the MDN Web Docs webpage
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
+    """
+
     # Finding an existing source to scrape the data
     url = f'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/{tag}'
     try:
@@ -152,6 +181,12 @@ def dev_mozilla_scrapper(tag, concept):
 
 
 def geek_scrapper(tag, concept):
+    """
+    This function scrapes the GeeksForGeeks webpage
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
+    """
 
     # Finding an existing source to scrape the data
     url = f'https://www.geeksforgeeks.org/html-{tag}-tag/'
@@ -196,6 +231,12 @@ def geek_scrapper(tag, concept):
 
 # Scraping from tutorialspoint website
 def tutorialspoint_scrapper(tag, concept):
+    """
+    This function scrapes the TutorialsPoint webpage
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
+    """
     # Finding the correct url
     responses = None
     url = f'https://www.tutorialspoint.com/html/html_{tag}_tag.htm'
@@ -233,8 +274,13 @@ def tutorialspoint_scrapper(tag, concept):
 
     return concept
 
-# Scrape from javaTpoint website
 def java_tpoint_scrapper(tag, concept):
+    """
+    This function scrapes the javaTpoint webpage
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
+    """
     url = f'https://www.javatpoint.com/html-{tag}-tag'
     try:
         if requests.get(url).status_code != 200:
@@ -280,8 +326,13 @@ def java_tpoint_scrapper(tag, concept):
     print('Successfully scraped ' + tag + ' from JavaTpoint')
     return concept
 
-# Extract data from tutorial_republic
 def tutorial_republic_scrapper(tag, concept):
+    """
+    This function scrapes the tutorial_republic webpage
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
+    """
     url = f'https://www.tutorialrepublic.com/html-reference/html-{tag}-tag.php'
     try:
         if requests.get(url).status_code != 200:
@@ -315,8 +366,14 @@ def tutorial_republic_scrapper(tag, concept):
     print('Successfully scraped ' + tag + ' from Tutorial Republic')
     return concept
 
-# Extract syntax from website tutorialrepublic
+
 def tutorial_republic_syntax_scrapper(tag, concept):
+    """
+    This function scrapes the tutorial_republic webpage for code syntaxes
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
+    """
     # Testing the url
     url = f'https://www.tutorialrepublic.com/html-reference/html-{tag}-tag.php'
     try:
@@ -356,8 +413,14 @@ def tutorial_republic_syntax_scrapper(tag, concept):
 
     return concept
 
-# Scrape from TechOnNet Website
+
 def techonnet_scrapper(tag, concept):
+    """
+    This function scrapes the TechOnNet webpage
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
+    """
     # Find the suitable url
     url = f'https://www.techonthenet.com/html/elements/{tag}_tag.php'
     try:
@@ -399,6 +462,12 @@ def techonnet_scrapper(tag, concept):
 
 # Scrape from Quackit website
 def quackit_scrapper(tag, concept):
+    """
+    This function scrapes the Quackit webpage
+    tag: tagname, should be a string
+    concept: concept object
+    returns concept object
+    """
     # Find the suitable url
     url = f'https://www.quackit.com/html/tags/html_{tag}_tag.cfm'
     try:

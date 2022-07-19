@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Gensim Loader Module
+
+This module contains the function to load and modify gensim models
+"""
 from gensim.models import KeyedVectors
 
 # Load Standard Word2Vec Glove Model

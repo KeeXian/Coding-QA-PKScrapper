@@ -1,23 +1,29 @@
-# This file functions to use machine learning to predict the tag of a given description.
+# -*- coding: utf-8 -*-
+"""
+Machine Learning Model Module
+
+This module contains the functions to build the machine learning model
+The main function is the build_model and predict_desc functions
+"""
 
 # Importing the libraries
 import numpy as np
 import pandas as pd
 import json
 
-# Function for Text Processing
 from sklearn.preprocessing import LabelEncoder
 from app.model.ml_hybrid import RuleAugmentedEstimator
 
-# Function to build a dnn model using the following files:
-# 1. model.sav
-# 2. glove.6B.300d.gs
-# 3. data.csv
-# 4. rules.json
 def build_model(csv_file, model_file, glove_file, rule_file):
     """
-    This function loads the model
+    This function builds a SVM model using the following files:
+    1. model.sav
+    2. glove.6B.300d.gs
+    3. data.csv
+    4. rules.json
+    Please ensure that the files are in the resources folder
     """
+    # Load the data
     data = pd.read_csv(csv_file, encoding='unicode_escape')
     data = data.loc[data['tag'] != 'ATR']
     data = data.loc[data['tag'] != 'EXP']
@@ -31,7 +37,6 @@ def build_model(csv_file, model_file, glove_file, rule_file):
     labels = labelencoder_y.classes_
     
     # Load the model
-    print('test')
     rules = json.load(open(rule_file))
     classifier = RuleAugmentedEstimator(model_file, glove_file, rules, labels)
     return classifier, labels
@@ -40,6 +45,9 @@ def build_model(csv_file, model_file, glove_file, rule_file):
 def predict_desc(list_of_desc, model, labels):
     """
     This function predicts the type of description of a given list of descriptions
+    list_of_desc: list of descriptions
+    model: machine learning model
+    labels: labels of the descriptions
     """
     list_of_desc = pd.DataFrame({'tag': list_of_desc})
     list_of_desc['tag'] = list_of_desc['tag'].str.lower()

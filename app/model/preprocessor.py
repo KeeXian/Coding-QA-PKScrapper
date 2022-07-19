@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Preprocessor Module
+
+This module contains the necessary functions to preprocess the text
+The main function is the text_preprocessing function
+"""
 import re
 import nltk
 from nltk.corpus import wordnet
@@ -11,8 +18,12 @@ tokenizer = nltk.RegexpTokenizer(r'\w+')
 lemmatizer = WordNetLemmatizer()
 english_words = set(nltk.corpus.words.words())
 
-# Function to lemmatize text
 def lemmatize_text(text):
+    """
+    This function lemmatizes the text and returns the lemmatized text
+    text: string
+    return lemmatized text
+    """
     def get_wordnet_pos(word):
         tag = nltk.pos_tag([word])[0][1][0].upper()
         tag_dict = {"J": wordnet.ADJ,
@@ -26,7 +37,9 @@ def lemmatize_text(text):
 # Function to perform text preprocessing
 def text_preprocessing(text):
     """
-    This function processes the text and returns the processed text
+    This function performs text preprocessing and returns the processed text
+    text: string
+    return preprocessed text
     """
     text = text.lower()
     text = re.sub('<[^<]+?>', 'TAG', text)

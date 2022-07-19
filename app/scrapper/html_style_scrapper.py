@@ -1,3 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Personalized HTML Styling Scraper
+
+This module scrapes code examples for a HTML styling from various sources.
+To scrape the code examples, you need to pass the property of the HTML styling and call the html_styling_scrapper function.
+Has a different method to scrape each of the selected sources
+Expected output:
+    {
+        'property': 'property',
+        'desc': [],
+        'examples': []
+    }
+"""
 from http.client import responses
 import requests
 from bs4 import BeautifulSoup
@@ -6,10 +20,11 @@ from nltk import sent_tokenize
 from app.api.url import generate_url
 
 
-# Function to scrape html styling
 def html_styling_scrapper(property):
     """
     This function scrapes the sources for css styling via html style tag
+    property: the property of the styling
+    returns a style object
     """
     url = generate_url('tutorialspoint', 'html', 'change ' + property)
     responses = requests.get(url)

@@ -1,11 +1,27 @@
+"""
+Programming Language Scrapper
+
+This module scrapes knowledge about a programming language from various sources.
+To scrape the knowledge, you need to pass the name of the programming language and call the language_scrapper function.
+Expected output:
+    {
+        'language': 'language',
+        'desc': 'description',
+        'examples': []
+    }
+"""
 from http.client import responses
 import requests
 from bs4 import BeautifulSoup
 from nltk import sent_tokenize
 
-# Return language
-# For this I will only  be referencing from geeksforgeeks
 def language_scrapper(po_language):
+    """
+    This function scrapes the geeksforgeeks webpage for programming language knowledge
+    po_language: the name of the programming language
+    returns a language object
+    """
+
     url = f'https://www.geeksforgeeks.org/{po_language}/'
     responses = requests.get(url)
     if responses.status_code != 200:

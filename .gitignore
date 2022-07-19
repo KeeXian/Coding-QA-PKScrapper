@@ -130,3 +130,4 @@ dmypy.json
 
 # AI
 *.npy
+model_old/
